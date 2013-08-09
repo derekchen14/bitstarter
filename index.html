@@ -3,20 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>My First Bitstarter</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="assets/custom.css" rel="stylesheet" type="text/css">
-	<link type="text/css" rel="stylesheet" 
-		href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">	
-	<link type="text/css" rel="stylesheet" 
-		href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
-	<link type="text/css" rel="stylesheet" 
-		href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
-	<script type="text/javascript" src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
-	<script type="text/javascript" src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
-	<link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" type="text/css" rel="stylesheet">
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800,300italic,400italic,600italic,700italic" type="text/css" rel="stylesheet">
-<style type="text/css">
-	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">    
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" 
+          rel="stylesheet" type="text/css">
+    <style type="text/css">
+
   /* Large Desktop */
 	@media (min-width: 980px) {
 		body {
@@ -61,6 +58,7 @@
 		line-height: 30px;
 	}
 	p {
+    padding-top: 1.5%;
 		font-size: 18px;
 		line-height: 24px;
 	}
@@ -78,9 +76,7 @@
 	}
 	.video, .thermometer, .order, .social, .statistics {
 		text-align: center;		
-/*		border: 1px dotted;
-		text-align: center;
-*/	}
+	}
 	.statistics h3, .statistics p {
 		color: white;
 	}
@@ -144,14 +140,12 @@ http://twitter.github.io/bootstrap/examples/starter-template.html -->
 				<h1>Notable</h1>
 			</div>
 		</div>
-
 		<div class="row-fluid subheading">
 			<div class="span12">
 				<!-- Special typography from Bootstrap for lead paragraph. -->
 				<p class="lead">The notetaking app to help you learn</p>
 			</div>
 		</div>
-
 		<div class="row-fluid pitch">
 			<div class="span5 offset1 video">
 				<img class="img-polaroid" src="http://placehold.it/480x300"></img>
@@ -159,9 +153,9 @@ http://twitter.github.io/bootstrap/examples/starter-template.html -->
 
 			<!-- Define a new 'actions' div to contain statistics, order and share buttons -->
 			<div class="span5 actions">
-				<div class="span8 offset2">
-					<div class="statistics">
-
+        <div class="row-fluid">
+        <div class="span8 offset2">
+          <div class="row-fluid statistics">
 						<!-- 	linediv-l and linediv-r give dividing lines that look different in horizontal and vertical layouts, illustrating media queries in action. -->
 						<div class="span4">
 							<div class="linediv-l">
@@ -183,20 +177,30 @@ http://twitter.github.io/bootstrap/examples/starter-template.html -->
 				</div>
 				<div class="span10 offset1">
 					<!-- Bootstrap progress bar -->
-					<div class="thermometer progress active">
-						<div class="bar bar-success" style="width: 60%"></div>
-						<div class="bar bar-warning" style="width: 40%"></div>
-					</div>
-				</div>
-				<div class="span6 offset3 order">
-					<button class="btn btn-success btn-large">Preorder</button>
-				</div>
-				<div class="span8 offset2 social">
-					<button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
-					<button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
-				</div>
-			</div>
-		</div>
+            <div class="thermometer progress active">
+              <div class="bar bar-success" style="width: 60%;"></div>
+              <div class="bar bar-warning" style="width: 40%;"></div>
+            </div>
+          </div>
+          </div>
+          <div class="row-fluid">
+          <div class="span6 offset3 order">
+            <!-- Standard Bootstrap button. -->
+            <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
+            <button class="btn btn-success btn-large">Preorder</button>
+          </div>
+          </div>
+          <div class="row-fluid">
+          <div class="span8 offset2 social">
+            <!-- Social buttons are not included in default Bootstrap. -->
+            <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
+            <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
+            <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
+          </div>
+          </div>
+        </div>
+        </div>
+      </div>
 
 		<!-- Marketing copy -->
 		<div class="row-fluid section1">
@@ -209,7 +213,6 @@ http://twitter.github.io/bootstrap/examples/starter-template.html -->
 				</p>
 				<p>
 					Sure, companies have tried to make progress, but most tools are difficult to learn and cumbersome to use. There simply lacks an application that not only has the accessibility of a piece of paper, but also has the capability of modern software (e.g. undo/redo). Even more troublesome, the apps that are good at collecting ideas fail to let you do anything with them once they are in the system. You can't structure, organize or manipuate your own data. You can't view the notes in a format that matches the way your mind thinks. This is where Notable steps in.
-
 				</p>
 			</div>
 		</div>
@@ -234,7 +237,8 @@ http://twitter.github.io/bootstrap/examples/starter-template.html -->
 
 					<div class="accordion-group">
 						<div class="accordion-heading">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+							<a class="accordion-toggle" data-toggle="collapse"
+								data-parent="#accordion2" href="#collapseOne">
 								How is this different from Evernote?
 							</a>
 						</div>
@@ -247,7 +251,8 @@ http://twitter.github.io/bootstrap/examples/starter-template.html -->
 
 					<div class="accordion-group">
 						<div class="accordion-heading">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+							<a class="accordion-toggle" data-toggle="collapse"
+								data-parent="#accordion2" href="#collapseTwo">
 								What are Notable's main features?
 							</a>
 						</div>
@@ -271,7 +276,6 @@ http://twitter.github.io/bootstrap/examples/starter-template.html -->
 						</div>	
 					</div>
 
-
 				</div>
 			</div>
 		</div>
@@ -279,8 +283,9 @@ http://twitter.github.io/bootstrap/examples/starter-template.html -->
 		<!-- Not crucial, but we put this under a CC By-SA 3.0 license. http://creativecommons.org/licenses/ -->
 		<div class="row-fluid footer">
 			<div class="span12">
-				<p>This works is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC By-SA 3.0</a>, without all the cruft that would otherwise be put at the bottom of the page.
-				</p>
+				<p>This works is licensed under the 
+					<a href="http://creativecommons.org/licenses/by-sa/3.0/">CC By-SA 3.0</a>
+					, without all the cruft that would otherwise be put at the bottom of the page.</p>
 			</div>
 		</div>
 	</div>	
